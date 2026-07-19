@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.ARDrawing" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/navbar_dark</item>
+        <item name="colorPrimaryVariant">@color/navbar_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/navbar_dark</item>
+    </style>
+
+    <style name="Theme.ARDrawing.Splash" parent="Theme.ARDrawing">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

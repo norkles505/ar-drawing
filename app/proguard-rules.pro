@@ -1,0 +1,2 @@
+-keep class com.ardrawing.app.** { *; }
+-keepclassmembers class * extends androidx.recyclerview.widget.RecyclerView$ViewHolder { *; }

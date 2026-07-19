@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ToolButton">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/bg_tool_button</item>
+        <item name="android:tint">#FFFFFF</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="ToolButton2">
+        <item name="android:layout_width">42dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:background">@drawable/bg_tool_button</item>
+        <item name="android:tint">#FFFFFF</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="ToolWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="ToolLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">#99FFFFFF</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AR Drawing</string>
+    <string name="choose_drawing">Choose a Drawing</string>
+    <string name="import_photo">Import Photo</string>
+    <string name="opacity">Opacity</string>
+    <string name="grid">Grid</string>
+    <string name="mirror">Mirror</string>
+    <string name="reset">Reset</string>
+    <string name="hint_gesture">Pinch to zoom · Drag to move</string>
+</resources>
