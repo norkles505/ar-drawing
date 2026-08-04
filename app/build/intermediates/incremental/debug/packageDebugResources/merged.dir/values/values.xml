@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent">#F2801A</color>
+    <color name="accent_dim">#20F2801A</color>
+    <color name="bg_dark">#1E1E1E</color>
+    <color name="bg_surface">#2A2A2A</color>
+    <color name="bg_surface2">#333333</color>
+    <color name="black">#111111</color>
+    <color name="divider">#3A3A3A</color>
+    <color name="mc_accent">#F2801A</color>
+    <color name="mc_accent_alpha">#EBF2801A</color>
+    <color name="mc_bg_dark">#1E1E1E</color>
+    <color name="mc_button_inactive">#96282828</color>
+    <color name="mc_popup_bg">#F5202020</color>
+    <color name="navbar_dark">#161616</color>
+    <color name="text_hint">#666666</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#999999</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">AR Drawing</string>
+    <string name="choose_drawing">Choose a Drawing</string>
+    <string name="grid">Grid</string>
+    <string name="hint_gesture">Pinch to zoom · Drag to move</string>
+    <string name="import_photo">Import Photo</string>
+    <string name="mirror">Mirror</string>
+    <string name="opacity">Opacity</string>
+    <string name="reset">Reset</string>
+    <style name="Theme.ARDrawing" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/navbar_dark</item>
+        <item name="colorPrimaryVariant">@color/navbar_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/navbar_dark</item>
+        <item name="android:windowLightNavigationBar" ns1:targetApi="27">false</item>
+    </style>
+    <style name="Theme.ARDrawing.Splash" parent="Theme.ARDrawing">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="ToolButton">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/bg_tool_button</item>
+        <item name="android:tint">#FFFFFF</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="ToolButton2">
+        <item name="android:layout_width">42dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:background">@drawable/bg_tool_button</item>
+        <item name="android:tint">#FFFFFF</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="ToolLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">#99FFFFFF</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+    <style name="ToolWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+</resources>

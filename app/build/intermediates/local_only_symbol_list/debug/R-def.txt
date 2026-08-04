@@ -7,6 +7,11 @@ color bg_surface
 color bg_surface2
 color black
 color divider
+color mc_accent
+color mc_accent_alpha
+color mc_bg_dark
+color mc_button_inactive
+color mc_popup_bg
 color navbar_dark
 color text_hint
 color text_primary
@@ -18,6 +23,7 @@ drawable bg_circle_dark
 drawable bg_controls_panel
 drawable bg_save_button
 drawable bg_surface2_shape
+drawable bg_toggle_pill
 drawable bg_tool_button
 drawable ic_add_photo
 drawable ic_arrow_back

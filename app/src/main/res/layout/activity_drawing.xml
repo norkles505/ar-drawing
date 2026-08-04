@@ -57,7 +57,7 @@
         android:paddingEnd="10dp"
         android:paddingTop="6dp"
         android:paddingBottom="6dp"
-        android:background="#FF1C2233"
+        android:background="@color/mc_popup_bg"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -173,7 +173,7 @@
         android:orientation="vertical"
         android:paddingTop="6dp"
         android:paddingBottom="10dp"
-        android:background="#F51C2233"
+        android:background="@color/mc_popup_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -203,7 +203,7 @@
                 android:layout_weight="1"
                 android:max="100"
                 android:progress="50"
-                android:progressTint="#FF6B35"
+                android:progressTint="@color/mc_accent"
                 android:thumbTint="#FFFFFF" />
 
         </LinearLayout>
@@ -247,7 +247,7 @@
                     android:layout_weight="1"
                     android:max="200"
                     android:progress="100"
-                    android:progressTint="#FF6B35"
+                    android:progressTint="@color/mc_accent"
                     android:thumbTint="#FFFFFF" />
 
                 <ImageButton
@@ -282,7 +282,7 @@
                     android:layout_weight="1"
                     android:max="200"
                     android:progress="100"
-                    android:progressTint="#FF6B35"
+                    android:progressTint="@color/mc_accent"
                     android:thumbTint="#FFFFFF" />
 
                 <ImageButton
@@ -325,7 +325,7 @@
                 android:layout_weight="1"
                 android:max="100"
                 android:progress="0"
-                android:progressTint="#FF6B35"
+                android:progressTint="@color/mc_accent"
                 android:thumbTint="#FFFFFF" />
 
             <TextView
@@ -397,7 +397,7 @@
                 android:layout_height="44dp"
                 android:src="@drawable/ic_scale_up"
                 android:background="@drawable/bg_tool_button"
-                android:tint="#FF6B35"
+                android:tint="@color/mc_accent"
                 android:contentDescription="Agrandar imagen" />
 
             <ImageButton
@@ -583,13 +583,10 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="2dp"
         android:src="@android:drawable/arrow_down_float"
-        android:background="@drawable/bg_tool_button"
+        android:background="@drawable/bg_toggle_pill"
         android:tint="#666666"
         android:contentDescription="Toggle controles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/controlsPanel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-

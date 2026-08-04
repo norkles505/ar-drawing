@@ -16,12 +16,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\ic_magnifier.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_bg_badge_today.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\bg_badge_today.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_ic_rotate.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\ic_rotate.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_bg_badge_today.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\bg_badge_today.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_sample_manga.png.flat",
@@ -44,12 +44,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\ic_pencil.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_course_level.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\item_course_level.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_project.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\item_project.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_course_level.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\item_course_level.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_ic_level.xml.flat",
@@ -58,6 +58,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_activity_lesson.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\activity_lesson.xml"
+    },
+    {
+        "merged": "com.ardrawing.app-merged_res-40:/drawable_bg_toggle_pill.xml.flat",
+        "source": "com.ardrawing.app-main-42:/drawable/bg_toggle_pill.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_ic_lock.xml.flat",
@@ -80,16 +84,16 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\bg_save_button.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_sample_rose.png.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\sample_rose.png"
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_activity_tutorial.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\activity_tutorial.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_activity_tutorial.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\activity_tutorial.xml"
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_sample_rose.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\sample_rose.png"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_sample_dragon.png.flat",
@@ -212,6 +216,10 @@
         "source": "com.ardrawing.app-main-42:/drawable/bg_save_button.xml"
     },
     {
+        "merged": "com.ardrawing.app-merged_res-40:/layout_activity_drawing.xml.flat",
+        "source": "com.ardrawing.app-main-42:/layout/activity_drawing.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -228,12 +236,16 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\ic_scale_down.xml"
     },
     {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_tutorial_slide.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\item_tutorial_slide.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_bg_btn_edit.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\bg_btn_edit.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_tutorial_slide.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\item_tutorial_slide.xml"
+        "merged": "com.ardrawing.app-merged_res-40:/drawable_bg_tool_button.xml.flat",
+        "source": "com.ardrawing.app-main-42:/drawable/bg_tool_button.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_ic_timer.xml.flat",

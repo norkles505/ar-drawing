@@ -34,10 +34,10 @@ com.ardrawing.app-emoji2-views-helper-1.2.0-32 C:\Users\HP\.gradle\caches\8.8\tr
 com.ardrawing.app-transition-1.2.0-33 C:\Users\HP\.gradle\caches\8.8\transforms\f444440da13169f6c4497f53e9a9baed\transformed\transition-1.2.0\res
 com.ardrawing.app-lifecycle-livedata-core-ktx-2.7.0-34 C:\Users\HP\.gradle\caches\8.8\transforms\fed8ed99cba61c4c0dc101f2826670af\transformed\lifecycle-livedata-core-ktx-2.7.0\res
 com.ardrawing.app-customview-poolingcontainer-1.0.0-35 C:\Users\HP\.gradle\caches\8.8\transforms\ff19a873dcd748a2de9c924906a5196c\transformed\customview-poolingcontainer-1.0.0\res
-com.ardrawing.app-pngs-36 C:\Users\HP\Desktop\ARDrawing\app\build\generated\res\pngs\debug
-com.ardrawing.app-resValues-37 C:\Users\HP\Desktop\ARDrawing\app\build\generated\res\resValues\debug
-com.ardrawing.app-packageDebugResources-38 C:\Users\HP\Desktop\ARDrawing\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.ardrawing.app-packageDebugResources-39 C:\Users\HP\Desktop\ARDrawing\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.ardrawing.app-merged_res-40 C:\Users\HP\Desktop\ARDrawing\app\build\intermediates\merged_res\debug
-com.ardrawing.app-debug-41 C:\Users\HP\Desktop\ARDrawing\app\src\debug\res
-com.ardrawing.app-main-42 C:\Users\HP\Desktop\ARDrawing\app\src\main\res
+com.ardrawing.app-pngs-36 C:\Users\HP\Desktop\proyectos\ar-drawing\app\build\generated\res\pngs\debug
+com.ardrawing.app-resValues-37 C:\Users\HP\Desktop\proyectos\ar-drawing\app\build\generated\res\resValues\debug
+com.ardrawing.app-packageDebugResources-38 C:\Users\HP\Desktop\proyectos\ar-drawing\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.ardrawing.app-packageDebugResources-39 C:\Users\HP\Desktop\proyectos\ar-drawing\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.ardrawing.app-merged_res-40 C:\Users\HP\Desktop\proyectos\ar-drawing\app\build\intermediates\merged_res\debug
+com.ardrawing.app-debug-41 C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\debug\res
+com.ardrawing.app-main-42 C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\res

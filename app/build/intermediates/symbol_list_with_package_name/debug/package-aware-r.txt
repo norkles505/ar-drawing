@@ -2021,6 +2021,11 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color mc_accent
+color mc_accent_alpha
+color mc_bg_dark
+color mc_button_inactive
+color mc_popup_bg
 color mtrl_btn_bg_color_selector
 color mtrl_btn_ripple_color
 color mtrl_btn_stroke_color_selector
@@ -2988,6 +2993,7 @@ drawable bg_circle_dark
 drawable bg_controls_panel
 drawable bg_save_button
 drawable bg_surface2_shape
+drawable bg_toggle_pill
 drawable bg_tool_button
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation

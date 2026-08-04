@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:2:1-53:12
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:2:1-53:12
 MERGED from [androidx.databinding:viewbinding:8.2.0] C:\Users\HP\.gradle\caches\8.8\transforms\3eab1a919be8036137a81a6a1d744292\transformed\viewbinding-8.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.8\transforms\cdb5e662615afd2a18bd07526ef34e65\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\8.8\transforms\1afed182bc56425a66c1a4ad7e16aa40\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -58,56 +58,56 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP\.gradle\cache
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HP\.gradle\caches\8.8\transforms\1596fe58f9944539e3d28fc11d92cf0b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\HP\.gradle\caches\8.8\transforms\bd4174cd583957687ede53b6c3632ec7\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 	package
-		INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:4:5-70
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:4:5-70
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:4:22-68
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:4:22-68
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:5:5-66
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:5:5-66
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:5:22-63
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:5:22-63
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:6:5-7:37
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:6:5-7:37
 	android:maxSdkVersion
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:7:9-35
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:6:22-78
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:6:22-78
 uses-permission#android.permission.READ_MEDIA_VIDEO
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:9:5-10:37
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:9:5-10:37
 	android:minSdkVersion
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:10:9-35
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:9:22-72
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:9:22-72
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:12:5-65
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:12:5-65
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:12:22-62
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:12:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:13:5-14:37
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:13:5-14:37
 	android:maxSdkVersion
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:14:9-35
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:13:22-77
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:13:22-77
 uses-permission#android.permission.READ_MEDIA_IMAGES
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:15:5-76
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:15:5-76
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:15:22-73
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:15:22-73
 uses-feature#android.hardware.camera
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:17:5-83
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:17:5-83
 	android:required
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:17:58-81
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:17:58-81
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:17:19-57
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:17:19-57
 application
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:19:5-52:19
-INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:19:5-52:19
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:19:5-52:19
+INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:19:5-52:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.8\transforms\cdb5e662615afd2a18bd07526ef34e65\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.8\transforms\cdb5e662615afd2a18bd07526ef34e65\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\8.8\transforms\1afed182bc56425a66c1a4ad7e16aa40\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -129,61 +129,61 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\8.8\transforms\fb70311bdaba7be8b245216b4ae3dd04\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\8.8\transforms\fb70311bdaba7be8b245216b4ae3dd04\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
-		INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.8\transforms\a9598759dd2d82293816cec8335b42ef\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:25:9-35
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:25:9-35
 	android:label
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:23:9-41
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:23:9-41
 	android:roundIcon
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:24:9-54
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:24:9-54
 	android:icon
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:22:9-43
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:22:9-43
 	android:allowBackup
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:21:9-35
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:21:9-35
 	android:theme
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:26:9-47
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:26:9-47
 activity#com.ardrawing.app.ui.SplashActivity
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:28:9-36:20
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:28:9-36:20
 	android:exported
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:30:13-36
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:30:13-36
 	android:theme
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:31:13-58
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:31:13-58
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:29:13-46
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:29:13-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:32:13-35:29
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:32:13-35:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:33:17-69
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:34:17-77
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:34:27-74
 activity#com.ardrawing.app.ui.GalleryActivity
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:38:9-41:56
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:38:9-41:56
 	android:windowSoftInputMode
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:41:13-54
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:41:13-54
 	android:exported
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:40:13-37
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:40:13-37
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:39:13-47
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:39:13-47
 activity#com.ardrawing.app.ui.DrawingActivity
-ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:43:9-47:56
+ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:43:9-47:56
 	android:screenOrientation
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:46:13-49
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:46:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:47:13-54
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:47:13-54
 	android:exported
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml:44:13-47
+		ADDED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml:44:13-47
 uses-sdk
-INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:8.2.0] C:\Users\HP\.gradle\caches\8.8\transforms\3eab1a919be8036137a81a6a1d744292\transformed\viewbinding-8.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.2.0] C:\Users\HP\.gradle\caches\8.8\transforms\3eab1a919be8036137a81a6a1d744292\transformed\viewbinding-8.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.8\transforms\cdb5e662615afd2a18bd07526ef34e65\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
@@ -291,9 +291,9 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\HP\.gradle\caches\8.8\transforms\bd4174cd583957687ede53b6c3632ec7\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\HP\.gradle\caches\8.8\transforms\bd4174cd583957687ede53b6c3632ec7\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\HP\Desktop\ARDrawing\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HP\Desktop\proyectos\ar-drawing\app\src\main\AndroidManifest.xml
 service#androidx.camera.core.impl.MetadataHolderService
 ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.8\transforms\869a8408280a6b58e3609d6c805b202d\transformed\camera-camera2-1.3.1\AndroidManifest.xml:24:9-33:19
 MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.8\transforms\7cac8e71e70e41bbecec0bed0f5522b3\transformed\camera-core-1.3.1\AndroidManifest.xml:29:9-33:78
