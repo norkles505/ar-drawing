@@ -1,9 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
+    android:viewportWidth="640"
+    android:viewportHeight="640">
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M21,6H3C1.9,6 1,6.9 1,8v8c0,1.1 0.9,2 2,2h18c1.1,0 2,-0.9 2,-2V8C23,6.9 22.1,6 21,6zM21,16H3V8h18V16zM5,15h2v-2H5V15zM5,11h2V9H5V11zM9,15h6v-2H9V15zM9,11h6V9H9V11zM17,15h2v-2h-2V15zM17,11h2V9h-2V11z"/>
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M 57.966797 33.251953 A 20 20 0 0 0 55.257812 33.443359 A 20 20 0 0 0 37.71875 53.28125 L 37.71875 194.71875 A 20 20 0 0 0 57.71875 214.71875 A 20 20 0 0 0 77.71875 194.71875 L 77.71875 73.251953 L 199.40234 73.251953 A 20 20 0 0 0 219.40234 53.251953 A 20 20 0 0 0 199.40234 33.251953 L 57.966797 33.251953 z " />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M 57.94805,604.4668 A 20,20 0 0 1 55.23906,604.27539 20,20 0 0 1 37.7,584.4375 V 443 a 20,20 0 0 1 20,-20 20,20 0 0 1 20,20 v 121.4668 h 121.68359 a 20,20 0 0 1 20,20 20,20 0 0 1 -20,20 z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="m 606.57519,53.139655 a 20,20 0 0 0 -0.1914,-2.70899 20,20 0 0 0 -19.83789,-17.53906 H 445.10839 a 20,20 0 0 0 -19.99999,20 20,20 0 0 0 19.99999,20 h 121.4668 V 194.57519 a 20,20 0 0 0 20,20 20,20 0 0 0 20,-20 z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="m 606.57479,584.43553 a 20,20 0 0 1 -0.1914,2.70899 20,20 0 0 1 -19.83789,17.53906 H 445.10799 a 20,20 0 0 1 -19.99999,-20 20,20 0 0 1 19.99999,-20 h 121.4668 V 443 a 20,20 0 0 1 20,-20 20,20 0 0 1 20,20 z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="40"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 195.97421,191.61694 H 445.8453 V 441.48803 H 195.97421 Z" />
 </vector>

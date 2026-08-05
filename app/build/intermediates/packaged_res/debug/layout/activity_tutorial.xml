@@ -46,9 +46,9 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:text="Atras"
-            android:textColor="#FF6B35"
+            android:textColor="@color/mc_accent"
             android:textSize="15sp"
-            android:backgroundTint="#1AFF6B35"
+            android:backgroundTint="@color/accent_dim"
             android:stateListAnimator="@null"
             android:visibility="invisible"
             android:layout_marginEnd="8dp" />
@@ -62,7 +62,7 @@
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:backgroundTint="#FF6B35"
+            android:backgroundTint="@color/mc_accent"
             android:stateListAnimator="@null" />
 
     </LinearLayout>

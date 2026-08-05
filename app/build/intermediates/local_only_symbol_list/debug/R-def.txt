@@ -1,8 +1,6 @@
 R_DEF: Internal format may change without notice
 local
-color accent
 color accent_dim
-color bg_dark
 color bg_surface
 color bg_surface2
 color black
@@ -36,6 +34,7 @@ drawable ic_level
 drawable ic_lock
 drawable ic_magnifier
 drawable ic_night
+drawable ic_opacity
 drawable ic_pencil
 drawable ic_record
 drawable ic_reset
@@ -46,6 +45,7 @@ drawable ic_scale_down
 drawable ic_scale_up
 drawable ic_size
 drawable ic_timer
+drawable ic_toggle_arrow
 drawable ic_undo
 drawable sample_butterfly
 drawable sample_cat

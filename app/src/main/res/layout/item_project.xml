@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/bg_dark">
+    android:background="@color/mc_bg_dark">
 
     <LinearLayout
         android:id="@+id/itemRoot"

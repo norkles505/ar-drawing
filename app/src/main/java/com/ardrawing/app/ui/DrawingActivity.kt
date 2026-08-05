@@ -31,6 +31,8 @@ import androidx.core.content.ContextCompat
 import com.ardrawing.app.camera.OverlayView
 import com.ardrawing.app.data.ProjectManager
 import com.ardrawing.app.databinding.ActivityDrawingBinding
+import com.ardrawing.app.reference.ReferenceImageManager
+import com.ardrawing.app.util.PomodoroTimer
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -92,8 +94,6 @@ class DrawingActivity : AppCompatActivity() {
 
     private var isInverted    = false
     private var isNightMode   = false
-    private var isTimerActive = false
-    private var countDownTimer: android.os.CountDownTimer? = null
 
 
     private var isRecording = false
@@ -101,17 +101,15 @@ class DrawingActivity : AppCompatActivity() {
 
     private val scaleHistory = ArrayDeque<OverlayView.OverlayState>(10)
 
-    private val referenceBitmaps = mutableListOf<Bitmap>()
-    private val referenceStates = mutableMapOf<Int, OverlayView.OverlayState>()
-    private val referenceLockStates = mutableMapOf<Int, Boolean>()
-    private var activeReferenceIndex = -1
+    private lateinit var referenceManager: ReferenceImageManager
+    private lateinit var pomodoroTimer: PomodoroTimer
 
     private val pickImageLauncher = registerForActivityResult(
         ActivityResultContracts.GetContent()
     ) { uri ->
         uri ?: return@registerForActivityResult
         val bmp = decodeBitmapFromUri(uri) ?: return@registerForActivityResult
-        addReferenceImage(bmp, uri.toString())
+        referenceManager.addNew(bmp)
     }
 
 
@@ -149,13 +147,48 @@ class DrawingActivity : AppCompatActivity() {
         sensorManager  = getSystemService(SENSOR_SERVICE) as SensorManager
         accelerometer  = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
+        referenceManager = ReferenceImageManager(
+            activity = this,
+            container = binding.referencesContainer,
+            overlayView = overlayView,
+            onReferenceApplied = { bitmap, scale ->
+                currentBitmap = bitmap
+                currentScale  = scale
+                fingerScale   = scale
+            },
+            onLockStateChanged = { locked ->
+                isLocked = locked
+                binding.btnLock.alpha = if (locked) 1f else 0.5f
+            },
+            onImagePickRequested = { pickImageLauncher.launch("image/*") }
+        )
+
+        pomodoroTimer = PomodoroTimer(
+            context = this,
+            onStart = {
+                binding.btnTimer.alpha = 1f
+                Toast.makeText(this, "⏱ Timer 25 min iniciado", Toast.LENGTH_SHORT).show()
+            },
+            onTick = { minLeft ->
+                Toast.makeText(this, "⏱ $minLeft min restantes", Toast.LENGTH_SHORT).show()
+            },
+            onFinish = {
+                binding.btnTimer.alpha = 0.5f
+                Toast.makeText(this, "⏱ Tiempo! Descansá 5 minutos", Toast.LENGTH_LONG).show()
+            },
+            onCancel = {
+                binding.btnTimer.alpha = 0.5f
+                Toast.makeText(this, "Timer cancelado", Toast.LENGTH_SHORT).show()
+            }
+        )
+
         activeProjectId = intent.getStringExtra(EXTRA_PROJECT_ID)
         if (activeProjectId != null) loadExistingProject(activeProjectId!!)
         else loadImageFromIntent()
 
         setupControls()
         setupGestureDetector()
-        setupReferences()
+        referenceManager.setup(currentBitmap)
         checkCameraPermission()
     }
 
@@ -164,7 +197,7 @@ class DrawingActivity : AppCompatActivity() {
         cameraExecutor.shutdown()
         sensorManager.unregisterListener(sensorListener)
 
-        countDownTimer?.cancel()
+        pomodoroTimer.release()
 
         recording?.stop()
     }
@@ -219,10 +252,12 @@ class DrawingActivity : AppCompatActivity() {
         binding.btnMirror.alpha         = if (isMirrorOn) 1f else 0.5f
 
         // Cargar imágenes de referencia guardadas
-        project.referenceImagePaths.forEachIndexed { i, path ->
-            val refBmp = BitmapFactory.decodeFile(path) ?: return@forEachIndexed
-            referenceBitmaps.add(refBmp)
+        val preloadedReferences = mutableListOf<Bitmap>()
+        project.referenceImagePaths.forEach { path ->
+            val refBmp = BitmapFactory.decodeFile(path) ?: return@forEach
+            preloadedReferences.add(refBmp)
         }
+        referenceManager.preload(preloadedReferences)
         Toast.makeText(this, "Proyecto cargado", Toast.LENGTH_SHORT).show()
     }
 
@@ -513,39 +548,7 @@ class DrawingActivity : AppCompatActivity() {
 
         // Timer Pomodoro
         binding.btnTimer.setOnClickListener {
-            if (isTimerActive) {
-                countDownTimer?.cancel()
-                isTimerActive = false
-                binding.btnTimer.alpha = 0.5f
-                Toast.makeText(this, "Timer cancelado", Toast.LENGTH_SHORT).show()
-            } else {
-                isTimerActive = true
-                binding.btnTimer.alpha = 1f
-                val minutes = 25
-                val millis = minutes * 60 * 1000L
-                countDownTimer = object : android.os.CountDownTimer(millis, 60000) {
-                    override fun onTick(millisUntilFinished: Long) {
-                        val minLeft = (millisUntilFinished / 60000).toInt() + 1
-                        Toast.makeText(this@DrawingActivity,
-                            "⏱ $minLeft min restantes", Toast.LENGTH_SHORT).show()
-                    }
-                    override fun onFinish() {
-                        isTimerActive = false
-                        binding.btnTimer.alpha = 0.5f
-                        val vibrator = getSystemService(VIBRATOR_SERVICE) as android.os.Vibrator
-                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                            vibrator.vibrate(android.os.VibrationEffect.createWaveform(
-                                longArrayOf(0, 500, 200, 500, 200, 500), -1))
-                        } else {
-                            @Suppress("DEPRECATION")
-                            vibrator.vibrate(longArrayOf(0, 500, 200, 500, 200, 500), -1)
-                        }
-                        Toast.makeText(this@DrawingActivity,
-                            "⏱ Tiempo! Descansá 5 minutos", Toast.LENGTH_LONG).show()
-                    }
-                }.start()
-                Toast.makeText(this, "⏱ Timer 25 min iniciado", Toast.LENGTH_SHORT).show()
-            }
+            pomodoroTimer.toggle()
         }
 
 
@@ -688,221 +691,6 @@ class DrawingActivity : AppCompatActivity() {
 
     }
 
-
-    private fun addReferenceImage(bmp: Bitmap, uriString: String? = null) {
-        if (referenceBitmaps.size >= 5) {
-            Toast.makeText(this, "Máximo 5 imágenes de referencia", Toast.LENGTH_SHORT).show()
-            return
-        }
-        referenceBitmaps.add(bmp)
-        val index = referenceBitmaps.size - 1
-        addReferenceThumbnail(bmp, index)
-        selectReference(index)
-    }
-
-    private fun addReferenceThumbnail(bmp: Bitmap, index: Int) {
-        val container = binding.referencesContainer
-
-        val thumb = android.widget.ImageView(this).apply {
-            val size = 60.dpToPx()
-            val margin = 4.dpToPx()
-            layoutParams = LinearLayout.LayoutParams(size, size).also {
-                it.marginEnd = margin
-            }
-            scaleType = android.widget.ImageView.ScaleType.CENTER_CROP
-            setImageBitmap(bmp)
-            clipToOutline = true
-
-            // Fondo redondeado negro sin borde (inactiva)
-            background = android.graphics.drawable.GradientDrawable().apply {
-                shape = android.graphics.drawable.GradientDrawable.RECTANGLE
-                cornerRadius = 10.dpToPx().toFloat()
-                setColor(android.graphics.Color.BLACK)
-                setStroke(2.dpToPx(), android.graphics.Color.parseColor("#444444"))
-            }
-
-            // Redondear la imagen también
-            outlineProvider = object : android.view.ViewOutlineProvider() {
-                override fun getOutline(view: android.view.View, outline: android.graphics.Outline) {
-                    outline.setRoundRect(0, 0, view.width, view.height, 10.dpToPx().toFloat())
-                }
-            }
-
-            setOnClickListener { selectReference(index) }
-            setOnLongClickListener {
-                showDeleteReferenceDialog(index)
-                true
-            }
-        }
-
-        val addBtn = container.findViewWithTag<android.widget.ImageButton>("btnAddReference")
-        val insertPos = if (addBtn != null) container.indexOfChild(addBtn) else container.childCount
-        container.addView(thumb, insertPos)
-    }
-
-
-    private fun showDeleteReferenceDialog(index: Int) {
-        if (referenceBitmaps.size <= 1) {
-            Toast.makeText(this, "Debe haber al menos una imagen", Toast.LENGTH_SHORT).show()
-            return
-        }
-        AlertDialog.Builder(this)
-            .setTitle("Eliminar imagen")
-            .setMessage("¿Eliminar esta imagen de referencia?")
-            .setPositiveButton("Eliminar") { _, _ ->
-                referenceBitmaps.removeAt(index)
-                // Rearmar índices del mapa de estados
-                val newStates = mutableMapOf<Int, OverlayView.OverlayState>()
-                referenceStates.forEach { (i, state) ->
-                    when {
-                        i < index -> newStates[i] = state
-                        i > index -> newStates[i - 1] = state
-                    }
-                }
-                referenceStates.clear()
-                referenceStates.putAll(newStates)
-
-                val newLocks = mutableMapOf<Int, Boolean>()
-                referenceLockStates.forEach { (i, lock) ->
-                    when {
-                        i < index -> newLocks[i] = lock
-                        i > index -> newLocks[i - 1] = lock
-                    }
-                }
-                referenceLockStates.clear()
-                referenceLockStates.putAll(newLocks)
-
-                // Reconstruir miniaturas
-                val container = binding.referencesContainer
-                container.removeAllViews()
-                referenceBitmaps.forEachIndexed { i, bmp ->
-                    addReferenceThumbnail(bmp, i)
-                }
-
-                // Volver a agregar el botón +
-                val addBtn = android.widget.ImageButton(this).apply {
-                    tag = "btnAddReference"
-                    layoutParams = LinearLayout.LayoutParams(56.dpToPx(), 56.dpToPx()).also {
-                        it.marginEnd = 4.dpToPx()
-                    }
-                    setImageResource(android.R.drawable.ic_input_add)
-                    setBackgroundResource(android.R.drawable.btn_default)
-                    setColorFilter(android.graphics.Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN)
-                    alpha = 0.7f
-                    setOnClickListener { pickImageLauncher.launch("image/*") }
-                }
-                container.addView(addBtn)
-
-                // Seleccionar la anterior o la primera
-                val newIndex = (index - 1).coerceAtLeast(0)
-                activeReferenceIndex = newIndex
-                selectReference(newIndex)
-
-                Toast.makeText(this, "Imagen eliminada", Toast.LENGTH_SHORT).show()
-            }
-            .setNegativeButton("Cancelar", null)
-            .show()
-    }
-
-    private fun selectReference(index: Int) {
-        // Guardar estado actual de la referencia activa antes de cambiar
-        if (activeReferenceIndex >= 0) {
-            referenceStates[activeReferenceIndex] = overlayView.getState()
-                .copy() // ya incluye todo menos isLocked
-            referenceLockStates[activeReferenceIndex] = isLocked
-        }
-
-        activeReferenceIndex = index
-        val bmp = referenceBitmaps[index]
-        currentBitmap = bmp
-        overlayView.setImage(bmp)
-
-        // Restaurar estado de la nueva referencia si existe, si no resetear
-        val savedState = referenceStates[index]
-        if (savedState != null) {
-            overlayView.restoreState(savedState)
-            currentScale = savedState.scale
-            fingerScale  = savedState.scale
-        } else {
-            overlayView.resetTransform()
-            currentScale = 1f
-            fingerScale  = 1f
-        }
-
-        // Restaurar lock de esta referencia
-        isLocked = referenceLockStates[index] ?: false
-        overlayView.setLocked(isLocked)
-        binding.btnLock.alpha = if (isLocked) 1f else 0.5f
-
-        // Resaltar miniatura activa
-        // Resaltar miniatura activa
-        val container = binding.referencesContainer
-        for (i in 0 until container.childCount) {
-            val v = container.getChildAt(i)
-            if (v is android.widget.ImageView) {
-                v.alpha = 1f
-                v.background = android.graphics.drawable.GradientDrawable().apply {
-                    shape = android.graphics.drawable.GradientDrawable.RECTANGLE
-                    cornerRadius = 10.dpToPx().toFloat()
-                    setColor(android.graphics.Color.BLACK)
-                    setStroke(
-                        if (i == index) 3.dpToPx() else 1.dpToPx(),
-                        if (i == index) android.graphics.Color.parseColor("#FF6B35")
-                        else android.graphics.Color.parseColor("#444444")
-                    )
-                }
-            }
-        }
-    }
-
-    private fun setupReferences() {
-        val container = binding.referencesContainer
-
-        if (referenceBitmaps.isEmpty()) {
-            // Proyecto nuevo — agregar la imagen inicial como primera referencia
-            currentBitmap?.let {
-                referenceBitmaps.add(it)
-            }
-        }
-
-        // Armar miniaturas para todas las referencias ya cargadas
-        referenceBitmaps.forEachIndexed { index, bmp ->
-            addReferenceThumbnail(bmp, index)
-        }
-
-        if (referenceBitmaps.isNotEmpty()) {
-            activeReferenceIndex = 0
-            // Resaltar la primera
-            val container2 = binding.referencesContainer
-            for (i in 0 until container2.childCount) {
-                val v = container2.getChildAt(i)
-                if (v is android.widget.ImageView) {
-                    v.alpha = if (i == 0) 1f else 0.5f
-                }
-            }
-        }
-
-        // Botón +
-        val addBtn = android.widget.ImageButton(this).apply {
-            tag = "btnAddReference"
-            layoutParams = LinearLayout.LayoutParams(60.dpToPx(), 60.dpToPx()).also {
-                it.marginEnd = 4.dpToPx()
-            }
-            setImageResource(android.R.drawable.ic_input_add)
-            setColorFilter(android.graphics.Color.parseColor("#FF6B35"), android.graphics.PorterDuff.Mode.SRC_IN)
-            background = android.graphics.drawable.GradientDrawable().apply {
-                shape = android.graphics.drawable.GradientDrawable.RECTANGLE
-                cornerRadius = 10.dpToPx().toFloat()
-                setColor(android.graphics.Color.parseColor("#1A1A1A"))
-                setStroke(1.dpToPx(), android.graphics.Color.parseColor("#FF6B35"))
-            }
-            setOnClickListener { pickImageLauncher.launch("image/*") }
-        }
-        container.addView(addBtn)
-    }
-
-    private fun Int.dpToPx(): Int = (this * resources.displayMetrics.density).toInt()
-
     private fun updateSizeLabel() {
         val bmp = currentBitmap ?: return
         val dm  = resources.displayMetrics
@@ -978,7 +766,7 @@ class DrawingActivity : AppCompatActivity() {
     }
 
     private fun doSaveProject(name: String) {
-        val saved = projectManager.saveProject(activeProjectId, name, currentBitmap, originalUri, overlayView.getState(), referenceBitmaps)
+        val saved = projectManager.saveProject(activeProjectId, name, currentBitmap, originalUri, overlayView.getState(), referenceManager.referenceBitmaps)
         activeProjectId = saved.id
         Toast.makeText(this, "Guardado: ${saved.name}", Toast.LENGTH_SHORT).show()
     }

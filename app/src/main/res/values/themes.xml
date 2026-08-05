@@ -5,10 +5,10 @@
         <item name="colorPrimary">@color/navbar_dark</item>
         <item name="colorPrimaryVariant">@color/navbar_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondary">@color/mc_accent</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="android:windowBackground">@color/bg_dark</item>
-        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowBackground">@color/mc_bg_dark</item>
+        <item name="android:statusBarColor">@color/mc_bg_dark</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">@color/navbar_dark</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>

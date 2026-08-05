@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Paleta MeshCraft -->
+    <!-- Paleta de la app -->
     <color name="mc_bg_dark">#1E1E1E</color>
     <color name="mc_accent">#F2801A</color>
     <color name="mc_accent_alpha">#EBF2801A</color>
     <color name="mc_button_inactive">#96282828</color>
     <color name="mc_popup_bg">#F5202020</color>
 
-    <color name="bg_dark">#1E1E1E</color>
     <color name="bg_surface">#2A2A2A</color>
     <color name="bg_surface2">#333333</color>
-    <color name="accent">#F2801A</color>
     <color name="accent_dim">#20F2801A</color>
     <color name="white">#FFFFFF</color>
     <color name="text_primary">#FFFFFF</color>

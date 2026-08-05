@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <color name="accent">#F2801A</color>
     <color name="accent_dim">#20F2801A</color>
-    <color name="bg_dark">#1E1E1E</color>
     <color name="bg_surface">#2A2A2A</color>
     <color name="bg_surface2">#333333</color>
     <color name="black">#111111</color>
@@ -29,10 +27,10 @@
         <item name="colorPrimary">@color/navbar_dark</item>
         <item name="colorPrimaryVariant">@color/navbar_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondary">@color/mc_accent</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="android:windowBackground">@color/bg_dark</item>
-        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowBackground">@color/mc_bg_dark</item>
+        <item name="android:statusBarColor">@color/mc_bg_dark</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">@color/navbar_dark</item>
         <item name="android:windowLightNavigationBar" ns1:targetApi="27">false</item>

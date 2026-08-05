@@ -1348,7 +1348,6 @@ color abc_tint_edittext
 color abc_tint_seek_thumb
 color abc_tint_spinner
 color abc_tint_switch_track
-color accent
 color accent_dim
 color accent_material_dark
 color accent_material_light
@@ -1358,7 +1357,6 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
-color bg_dark
 color bg_surface
 color bg_surface2
 color black
@@ -3036,6 +3034,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_night
+drawable ic_opacity
 drawable ic_pencil
 drawable ic_record
 drawable ic_reset
@@ -3047,6 +3046,7 @@ drawable ic_scale_up
 drawable ic_search_black_24
 drawable ic_size
 drawable ic_timer
+drawable ic_toggle_arrow
 drawable ic_undo
 drawable m3_avd_hide_password
 drawable m3_avd_show_password

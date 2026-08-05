@@ -62,7 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textColor="#FF6B35"
+                    android:textColor="@color/mc_accent"
                     android:textSize="13sp"
                     android:textStyle="bold"
                     android:layout_marginStart="4dp" />
@@ -98,7 +98,7 @@
                     android:id="@+id/xpBar"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:background="#FF6B35" />
+                    android:background="@color/mc_accent" />
 
             </FrameLayout>
 
@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nv.1"
-                android:textColor="#FF6B35"
+                android:textColor="@color/mc_accent"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:layout_marginStart="8dp" />

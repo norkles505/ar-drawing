@@ -188,12 +188,12 @@
             android:paddingEnd="14dp"
             android:paddingBottom="6dp">
 
-            <TextView
-                android:layout_width="16dp"
-                android:layout_height="wrap_content"
-                android:text="O"
-                android:textColor="#55FFFFFF"
-                android:textSize="13sp"
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_opacity"
+                android:contentDescription="Opacidad"
+                android:tint="#55FFFFFF"
                 android:layout_marginEnd="10dp" />
 
             <SeekBar
@@ -427,14 +427,25 @@
                 android:gravity="center_vertical"
                 android:paddingTop="2dp">
 
+                <!-- Fase 1: posicionar la imagen de referencia -->
+
                 <LinearLayout style="@style/ToolWrap">
                     <ImageButton
-                        android:id="@+id/btnGrid"
+                        android:id="@+id/btnScale"
                         style="@style/ToolButton2"
-                        android:src="@drawable/ic_grid"
-                        android:contentDescription="Cuadricula"
+                        android:src="@drawable/ic_scale_up"
+                        android:contentDescription="Tamaño imagen"
                         android:alpha="0.5" />
-                    <TextView style="@style/ToolLabel" android:text="grid" />
+                    <TextView style="@style/ToolLabel" android:text="escala" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ToolWrap">
+                    <ImageButton
+                        android:id="@+id/btnRotate"
+                        style="@style/ToolButton2"
+                        android:src="@drawable/ic_rotate"
+                        android:contentDescription="Rotar" />
+                    <TextView style="@style/ToolLabel" android:text="rotar" />
                 </LinearLayout>
 
                 <LinearLayout style="@style/ToolWrap">
@@ -449,41 +460,15 @@
 
                 <LinearLayout style="@style/ToolWrap">
                     <ImageButton
-                        android:id="@+id/btnRotate"
-                        style="@style/ToolButton2"
-                        android:src="@drawable/ic_rotate"
-                        android:contentDescription="Rotar" />
-                    <TextView style="@style/ToolLabel" android:text="rotar" />
-                </LinearLayout>
-
-                <LinearLayout style="@style/ToolWrap">
-                    <ImageButton
                         android:id="@+id/btnLock"
                         style="@style/ToolButton2"
                         android:src="@drawable/ic_lock"
                         android:contentDescription="Bloquear"
                         android:alpha="0.5" />
-                    <TextView style="@style/ToolLabel" android:text="lock" />
+                    <TextView style="@style/ToolLabel" android:text="bloquear" />
                 </LinearLayout>
 
-                <LinearLayout style="@style/ToolWrap">
-                    <ImageButton
-                        android:id="@+id/btnReset"
-                        style="@style/ToolButton2"
-                        android:src="@drawable/ic_reset"
-                        android:contentDescription="Reset" />
-                    <TextView style="@style/ToolLabel" android:text="reset" />
-                </LinearLayout>
-
-                <LinearLayout style="@style/ToolWrap">
-                    <ImageButton
-                        android:id="@+id/btnRuler"
-                        style="@style/ToolButton2"
-                        android:src="@drawable/ic_ruler"
-                        android:contentDescription="Regla"
-                        android:alpha="0.5" />
-                    <TextView style="@style/ToolLabel" android:text="regla" />
-                </LinearLayout>
+                <!-- Fase 2: ajustar visual para calcar -->
 
                 <LinearLayout style="@style/ToolWrap">
                     <ImageButton
@@ -497,12 +482,34 @@
 
                 <LinearLayout style="@style/ToolWrap">
                     <ImageButton
-                        android:id="@+id/btnSize"
+                        android:id="@+id/btnGrid"
                         style="@style/ToolButton2"
-                        android:src="@drawable/ic_size"
-                        android:contentDescription="Tamano"
+                        android:src="@drawable/ic_grid"
+                        android:contentDescription="Cuadricula"
                         android:alpha="0.5" />
-                    <TextView style="@style/ToolLabel" android:text="tam." />
+                    <TextView style="@style/ToolLabel" android:text="cuadrícula" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ToolWrap">
+                    <ImageButton
+                        android:id="@+id/btnInvert"
+                        style="@style/ToolButton2"
+                        android:src="@drawable/ic_invert"
+                        android:contentDescription="Invertir colores"
+                        android:alpha="0.5" />
+                    <TextView style="@style/ToolLabel" android:text="invertir" />
+                </LinearLayout>
+
+                <!-- Fase 3: ayudas de medición -->
+
+                <LinearLayout style="@style/ToolWrap">
+                    <ImageButton
+                        android:id="@+id/btnRuler"
+                        style="@style/ToolButton2"
+                        android:src="@drawable/ic_ruler"
+                        android:contentDescription="Regla"
+                        android:alpha="0.5" />
+                    <TextView style="@style/ToolLabel" android:text="regla" />
                 </LinearLayout>
 
                 <LinearLayout style="@style/ToolWrap">
@@ -517,6 +524,18 @@
 
                 <LinearLayout style="@style/ToolWrap">
                     <ImageButton
+                        android:id="@+id/btnSize"
+                        style="@style/ToolButton2"
+                        android:src="@drawable/ic_size"
+                        android:contentDescription="Tamano"
+                        android:alpha="0.5" />
+                    <TextView style="@style/ToolLabel" android:text="medida" />
+                </LinearLayout>
+
+                <!-- Fase 4: cámara -->
+
+                <LinearLayout style="@style/ToolWrap">
+                    <ImageButton
                         android:id="@+id/btnZoom"
                         style="@style/ToolButton2"
                         android:src="@drawable/ic_magnifier"
@@ -525,29 +544,7 @@
                     <TextView style="@style/ToolLabel" android:text="zoom" />
                 </LinearLayout>
 
-                <LinearLayout style="@style/ToolWrap">
-                    <ImageButton
-                        android:id="@+id/btnScale"
-                        style="@style/ToolButton2"
-                        android:src="@drawable/ic_scale_up"
-                        android:contentDescription="Tamaño imagen"
-                        android:alpha="0.5" />
-                    <TextView style="@style/ToolLabel" android:text="tamaño" />
-                </LinearLayout>
-
-
-
-                
-
-                <LinearLayout style="@style/ToolWrap">
-                    <ImageButton
-                        android:id="@+id/btnInvert"
-                        style="@style/ToolButton2"
-                        android:src="@drawable/ic_invert"
-                        android:contentDescription="Invertir colores"
-                        android:alpha="0.5" />
-                    <TextView style="@style/ToolLabel" android:text="invertir" />
-                </LinearLayout>
+                <!-- Fase 5: sesión -->
 
                 <LinearLayout style="@style/ToolWrap">
                     <ImageButton
@@ -556,7 +553,7 @@
                         android:src="@drawable/ic_timer"
                         android:contentDescription="Timer"
                         android:alpha="0.5" />
-                    <TextView style="@style/ToolLabel" android:text="timer" />
+                    <TextView style="@style/ToolLabel" android:text="temporizador" />
                 </LinearLayout>
 
                 <LinearLayout style="@style/ToolWrap">
@@ -567,6 +564,17 @@
                         android:contentDescription="Modo nocturno"
                         android:alpha="0.5" />
                     <TextView style="@style/ToolLabel" android:text="noche" />
+                </LinearLayout>
+
+                <!-- Fase 6: acción global/destructiva, al final para evitar toques accidentales -->
+
+                <LinearLayout style="@style/ToolWrap">
+                    <ImageButton
+                        android:id="@+id/btnReset"
+                        style="@style/ToolButton2"
+                        android:src="@drawable/ic_reset"
+                        android:contentDescription="Reset" />
+                    <TextView style="@style/ToolLabel" android:text="reset" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -582,7 +590,7 @@
         android:layout_height="24dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="2dp"
-        android:src="@android:drawable/arrow_down_float"
+        android:src="@drawable/ic_toggle_arrow"
         android:background="@drawable/bg_toggle_pill"
         android:tint="#666666"
         android:contentDescription="Toggle controles"
