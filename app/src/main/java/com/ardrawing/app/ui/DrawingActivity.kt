@@ -97,7 +97,6 @@ class DrawingActivity : AppCompatActivity() {
 
 
     private var isRecording = false
-    private var timelapseRecorder: com.ardrawing.app.camera.TimelapseRecorder? = null
 
     private val scaleHistory = ArrayDeque<OverlayView.OverlayState>(10)
 

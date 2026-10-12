@@ -44,10 +44,6 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\ic_pencil.xml"
     },
     {
-        "merged": "com.ardrawing.app-merged_res-40:/layout_activity_course.xml.flat",
-        "source": "com.ardrawing.app-main-42:/layout/activity_course.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_project.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\item_project.xml"
     },
@@ -96,12 +92,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\sample_rose.png"
     },
     {
-        "merged": "com.ardrawing.app-merged_res-40:/layout_activity_tutorial.xml.flat",
-        "source": "com.ardrawing.app-main-42:/layout/activity_tutorial.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\drawable_sample_dragon.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\sample_dragon.png"
+    },
+    {
+        "merged": "com.ardrawing.app-merged_res-40:/layout_item_project.xml.flat",
+        "source": "com.ardrawing.app-main-42:/layout/item_project.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_gallery.xml.flat",
@@ -172,10 +168,6 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\drawable\\sample_butterfly.png"
     },
     {
-        "merged": "com.ardrawing.app-merged_res-40:/layout_item_lesson.xml.flat",
-        "source": "com.ardrawing.app-main-42:/layout/item_lesson.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_activity_course.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\layout\\activity_course.xml"
     },
@@ -234,10 +226,6 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-main-42:\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "com.ardrawing.app-merged_res-40:/layout_activity_lesson.xml.flat",
-        "source": "com.ardrawing.app-main-42:/layout/activity_lesson.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.8\\com.ardrawing.app-merged_res-40:\\layout_item_lesson.xml.flat",

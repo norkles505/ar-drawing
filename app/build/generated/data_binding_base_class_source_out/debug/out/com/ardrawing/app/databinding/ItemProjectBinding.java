@@ -25,9 +25,6 @@ public final class ItemProjectBinding implements ViewBinding {
   public final ImageButton btnDeleteProject;
 
   @NonNull
-  public final LinearLayout itemRoot;
-
-  @NonNull
   public final ImageView ivProjectThumb;
 
   @NonNull
@@ -36,24 +33,14 @@ public final class ItemProjectBinding implements ViewBinding {
   @NonNull
   public final TextView tvProjectName;
 
-  @NonNull
-  public final TextView tvTodayBadge;
-
-  @NonNull
-  public final View viewAccentBar;
-
   private ItemProjectBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnDeleteProject,
-      @NonNull LinearLayout itemRoot, @NonNull ImageView ivProjectThumb,
-      @NonNull TextView tvProjectDate, @NonNull TextView tvProjectName,
-      @NonNull TextView tvTodayBadge, @NonNull View viewAccentBar) {
+      @NonNull ImageView ivProjectThumb, @NonNull TextView tvProjectDate,
+      @NonNull TextView tvProjectName) {
     this.rootView = rootView;
     this.btnDeleteProject = btnDeleteProject;
-    this.itemRoot = itemRoot;
     this.ivProjectThumb = ivProjectThumb;
     this.tvProjectDate = tvProjectDate;
     this.tvProjectName = tvProjectName;
-    this.tvTodayBadge = tvTodayBadge;
-    this.viewAccentBar = viewAccentBar;
   }
 
   @Override
@@ -89,12 +76,6 @@ public final class ItemProjectBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.itemRoot;
-      LinearLayout itemRoot = ViewBindings.findChildViewById(rootView, id);
-      if (itemRoot == null) {
-        break missingId;
-      }
-
       id = R.id.ivProjectThumb;
       ImageView ivProjectThumb = ViewBindings.findChildViewById(rootView, id);
       if (ivProjectThumb == null) {
@@ -113,20 +94,8 @@ public final class ItemProjectBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvTodayBadge;
-      TextView tvTodayBadge = ViewBindings.findChildViewById(rootView, id);
-      if (tvTodayBadge == null) {
-        break missingId;
-      }
-
-      id = R.id.viewAccentBar;
-      View viewAccentBar = ViewBindings.findChildViewById(rootView, id);
-      if (viewAccentBar == null) {
-        break missingId;
-      }
-
-      return new ItemProjectBinding((LinearLayout) rootView, btnDeleteProject, itemRoot,
-          ivProjectThumb, tvProjectDate, tvProjectName, tvTodayBadge, viewAccentBar);
+      return new ItemProjectBinding((LinearLayout) rootView, btnDeleteProject, ivProjectThumb,
+          tvProjectDate, tvProjectName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
