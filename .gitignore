@@ -1,0 +1,39 @@
+# Gradle / Android
+.gradle/
+build/
+app/build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+output-metadata.json
+
+# Firmas (nunca subir)
+*.jks
+*.keystore
+
+# Android Studio / IDEs
+.idea/
+*.iml
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+
+# Copias de seguridad, logs y temporales
+*.bak
+*.tmp
+*.log
+
+# Scripts y salidas sueltas de depuracion
+build_log.txt
+fix*.py
+__pycache__/
+*.py[cod]
